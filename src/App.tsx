@@ -8,7 +8,7 @@ import './App.css';
 
 export function App() {
   return (
-    <Router basename="/LunixDev">
+    <Router basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
       <Navbar />
       <main className="main-content">
         <Routes>

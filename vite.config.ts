@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/LunixDev/',
+  base: process.env.GITHUB_ACTIONS ? '/LunixDev/' : '/',
   plugins: [
     react(),
     tailwindcss(),
